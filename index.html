@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Basic CSS Selectors: Simple and Attribute Selectors</title>
+    <link rel="stylesheet" href="./styles.css" type="text/css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <h1>Basic CSS Selectors: Simple and Attribute Selectors</h1>
+		<p>A <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#simple_selector" target="_blank">simple selector</a> is a selector with a single component, such as a single type selector, attribute selector, or pseudo-class, 
+			that's not used in combination with or contains any other selector component or combinator. A given element is said to match a 
+			simple selector when that simple selector accurately describes the element. Any selector that contains a single <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#basic_selectors" target="_blank">selector</a>, 
+			<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors" target="_blank">attribute selector</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes" target="_blank">pseudo-class</a>, 
+			or <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements" target="_blank">pseudo-element</a> selector is a simple selector.</p>
+    <h2>Table with 4 Simple Selectors</h2>
+
+    <table>
+      <thead>
+        <tr><th>Syntax / Usage</th>
+        <th>Selector name</th>
+        <th class="description">Description</th>
+				<th class="link">Link to MDN Web Docs</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="code">*</span></td>
+          <td>Universal selector</td>
+          <td>The universal selector, denoted with an asterisk (*), is a special type selector that selects all elements.</td>
+					<td><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Universal_selectors" target="_blank">universal selector</a></td>
+        </tr>
+        <tr>
+          <td><span class="code">.myClass</span></td>
+          <td>Class selector</td>
+          <td>The class selector selects all elements that have the given class attribute denoted by the class name prefixed with a period (.)</td>
+					<td><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors" target="_blank">class selector</a></td>
+        </tr>
+        <tr>
+          <td><span class="code">#myId</span></td>
+          <td>ID Selector</td>
+          <td>The ID selector selects an element based on the value of its id attribute. The selector is the id prefixed with a "number sign" (U+0023, #).</td>
+					<td><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/ID_selectors" target="_blank">ID selector</a></td>
+        </tr>
+        <tr>
+          <td><span class="code">div</span></td>
+          <td>Type selector</td>
+          <td>The type selector selects all elements that have the given node name. For example, div will select all &#60;div&#62; elements and input will match any &#60;input&#62; element.</td>
+					<td><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Type_selectors" target="_blank">type selector</a></td>
+        </tr>        
+      </tbody>
+    </table>
+
+		<p>The CSS <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors" target="_blank">attribute selector</a> 
+			matches elements based on the element having a given attribute explicitly set, with options for defining an attribute value or substring value match.</p>
+    <h2>Examples of Attribute Selectors</h2>
+
+    <table>
+
+      <thead>
+        <tr><th>Example Usage</th>        
+        <th class="description">Description</th>
+      	</tr>
+			</thead>
+
+      <tbody>
+        <tr>
+          <td><span class="code">a[title] {	color: purple; }</span></td> 
+          <td>&#60;a&#62; elements with a title attribute</td>            
+        </tr>
+
+        <tr>
+          <td><span class="code">a[href="https://example.org"] { color: green; }</span></td>
+          <td>&#60;a&#62; elements with an href matching "https://example.org"</td>          
+        </tr>
+
+				<tr>
+          <td><span class="code">a[href*="example"] {	font-size: 2em;	}</span></td>
+          <td>&#60;a&#62; elements with an href containing "example"</td>          
+        </tr>
+
+				<tr>
+          <td><span class="code">a[href$=".org" i] { font-style: italic; }</span></td>
+          <td>&#60;a&#62; elements with an href ending ".org", case-insensitive</td>          
+        </tr>
+
+				<tr>
+          <td><span class="code">a[class~="logo"] {	padding: 2px;	}</span></td>
+          <td>&#60;a&#62; elements whose class attribute contains the word "logo"</td>          
+        </tr>
+
+      </tbody>
+
+    </table>
+
+		<footer>
+			I, <a href="https://github.com/Ubeydu" target="_blank">Ubeydullah Keleş</a>, built this simple CSS cheatsheet using <a href="https://www.codecademy.com/" target="_blank">Codecademy</a> and <a href="https://developer.mozilla.org/en-US/" target="_blank">MDN Web Docs</a> resources. Enjoy.
+		</footer>
+
+</body>
+</html>
